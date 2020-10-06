@@ -7,16 +7,19 @@
 function palindrome() {
     let input = document.getElementById("input1").value;
     let reverse = ""
+    let cutWord = input.split("").reverse().join("");
 
-    for (i = 0; i <= input.length - 1; i--) {
+
+    for (i = input; i <= input.length - 1; i--) {
         reverse += input.charAt(i);
+        document.getElementById("flipResult").innerHTML = cutWord;
     }
     if (input == reverse) {
         alert("is Palindrome")
-    } else {
+    }
+    else {
         alert("try again")
     }
-    document.getElementById("flipResult").innerHTML = reverse;
 }
 
 
