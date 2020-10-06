@@ -1,28 +1,29 @@
 ﻿//reverse a string/Palindrome
-function reverseString() {
-  /*  //get data from user
-    let userInput = document.getElementById("reverse");
 
+//document.getElementById("palindrome").addEventListener("click", function () {
+//    palindrome();
+//});
 
-//for loop to reverse the word
-    let reverse = "";
+function palindrome() {
+    let input = document.getElementById("input1").value;
+    let reverse = ""
 
-    for (let loop = 0; loop < userInput.length - 1; loop--) {
-        reverse += userInput[loop];
+    for (i = 0; i <= input.length - 1; i--) {
+        reverse += input.charAt(i);
     }
-
-    //output to the user
-    if (inputword == reverse) {
-        alert("is palindrome")
-    }*/
-    let inputWord = document.getElementById("userInput").value;
-    let lowerInput = inputWord.toLowerCase();
-    let reverseWord = "";
-
-    for (let loop = inputWord.length - 1; loop >= 0; loop--) {
-        lowerInput == reverseWord
+    if (input == reverse) {
+        alert("is Palindrome")
+    } else {
+        alert("try again")
     }
-    //   /[\W_]/g
-
+    document.getElementById("flipResult").innerHTML = reverse;
 }
 
+
+
+//   /[\W_]/g
+//document.getElementById("flippy").addEventListener("click", function () {
+
+//})
+
+//document.getElementById("reverse the out put").innerHTML = reverse
