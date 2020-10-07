@@ -37,13 +37,13 @@ function palindrome() {
     for (let loop = inpuWord.length - 1; loop >= 0; loop--) {
         reverseWord += inpuWord.charAt(loop);
     }
-    let palResult = inpuWord.split("").reverse().join("");
+    //let palResult = inpuWord.split("").reverse().join("");
     if (inpuWord == reverseWord) {
-        document.getElementById("flipResult").innerHTML = palResult;
         alert("you're correct!!")
     }
     else {
         alert("Wrong");
     }
+        document.getElementById("flipResult").innerHTML = reverseWord;
     
 }
