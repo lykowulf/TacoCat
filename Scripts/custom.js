@@ -47,3 +47,40 @@ function palindrome() {
         document.getElementById("flipResult").innerHTML = reverseWord;
     
 }
+
+
+
+
+
+//button eventlistener for tacocat
+//document.getElementById("btnTaco").addEventListener("click", function () {
+//}
+//);
+
+
+//user validation 
+//press the button
+
+function isAlphaKey() {
+    // assign a value to character
+    //value assigned will be evt.which or evt.KeyCode
+    //if(evt.which)== true use evt.which else evt.KeyCode
+    var character = evt.which;
+
+    // i will allow what you types into the text box if its either a-z or A-Z
+    if (character > 97 && character < 122 || character >= 65 && character <= 90 || character == 8) {
+        return true;
+    }
+    else {
+        return false;
+    }
+
+}
+//need onkeypress="()" on the input field
+
+
+//first wire up an event listener that listens for the onkeypress event checks for valid input type i.e. numbers in this case. 
+
+document.getElementById("textTacoIn").addEventListener("keydown", function () {
+
+});
