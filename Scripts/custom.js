@@ -23,13 +23,14 @@ function palindrome() {
 
 //user validation
 document.getElementById("input1").addEventListener("keydown", function (e) {
+    //variable char determines which key is pressed
     let char = e.which ? e.which : e.keyCode;
-
-
-    if (char >= 97 && char <= 127 || char >= 65 && char <= 90 || char == 8 || char >= 96 && char <= 105) {
+    
+    //then we create a conditional statement that determines if we can enter the key that was pressed. a-z, A-Z, backspace.
+    if (char >= 97 && char <= 122 || char >= 65 && char <= 90 || char == 8 ) {
         return true;
     } else {
-        e.preventDefault();
+        e.preventDefault();//makes sure the action will not happen
         return false;
     }
 });
