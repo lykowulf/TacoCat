@@ -20,7 +20,7 @@
     <!-- Navigation -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark static-top">
         <div class="container">
-            <a class="navbar-brand" href="/Index.html">Challenge Name Here</a>
+            <a class="navbar-brand" href="/Index.html">Tacocat</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -43,9 +43,7 @@
                     <li class="nav-item">
                         <a class="nav-link" href="#">Portfolio</a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Blog Post/YouTube Explanation</a>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
@@ -61,6 +59,27 @@
                     <li>Code with highlighter</li>
                     <li>Will display on this page</li>
                 </ul>
+                <div class="col-6 offset-3">
+<pre>
+<code class="language-js line-numbers">function palindrome() {
+let inpuWord = document.getElementById("input1").value;
+let reverseWord = "";
+for (let loop = inpuWord.length - 1; loop >= 0; loop--) {
+reverseWord += inpuWord.charAt(loop);
+}
+//let palResult = inpuWord.split("").reverse().join("");
+if (inpuWord == reverseWord) {
+alert("you're correct!!")
+}
+else {
+alert("Wrong");
+}
+document.getElementById("flipResult").innerHTML = reverseWord;
+
+}
+</code>
+</pre>
+                </div>
             </div>
         </div>
     </div>
@@ -69,7 +88,7 @@
     <script src="//code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-
+    <script src="Scripts/prism.js"></script>
 </body>
 
 </html>
