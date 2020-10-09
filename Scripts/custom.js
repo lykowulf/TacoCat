@@ -1,22 +1,30 @@
 ﻿//determine if the word is a palindrome
 
 function palindrome() {
+    //takes in user input through element with the id of input1
     let inpuWord = document.getElementById("input1").value;
-    let reverseWord = "";
+    let reverseWord = ""; //creating an empty string variable 
+
+    //created a for loop to loop through each character of a string
     for (let loop = inpuWord.length - 1; loop >= 0; loop--) {
         reverseWord += inpuWord.charAt(loop);
     }
+
+    //if the input field is empty return an alert to the user 
     if (inpuWord == "") {
         alert("You must enter a word")
         return;
     }
-    
+
+    //if input is equal to the reversed word then alert the word is a palindrome
     if (inpuWord == reverseWord) {
         alert("you're correct!!")
     }
+    //else alert if word input is not a palindrome
     else {
         alert("Wrong");
     }
+    //outputs the reversed word to the html element flipResult
     document.getElementById("flipResult").innerHTML = reverseWord;
 
 }
@@ -30,7 +38,7 @@ document.getElementById("input1").addEventListener("keydown", function (e) {
     if (char >= 97 && char <= 122 || char >= 65 && char <= 90 || char == 8 ) {
         return true;
     } else {
-        e.preventDefault();//makes sure the action will not happen
+        e.preventDefault();//makes sure the action will not happen before user input
         return false;
     }
 });
