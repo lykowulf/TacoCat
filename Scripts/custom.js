@@ -6,7 +6,11 @@ function palindrome() {
     for (let loop = inpuWord.length - 1; loop >= 0; loop--) {
         reverseWord += inpuWord.charAt(loop);
     }
-    //let palResult = inpuWord.split("").reverse().join("");
+    if (inpuWord == "") {
+        alert("You must enter a word")
+        return;
+    }
+    
     if (inpuWord == reverseWord) {
         alert("you're correct!!")
     }
@@ -16,6 +20,19 @@ function palindrome() {
     document.getElementById("flipResult").innerHTML = reverseWord;
 
 }
+
+//user validation
+document.getElementById("input1").addEventListener("keydown", function (e) {
+    let char = e.which ? e.which : e.keyCode;
+
+
+    if (char >= 97 && char <= 127 || char >= 65 && char <= 90 || char == 8 || char >= 96 && char <= 105) {
+        return true;
+    } else {
+        e.preventDefault();
+        return false;
+    }
+});
 
 
 

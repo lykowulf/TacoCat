@@ -77,6 +77,8 @@
     <script>
         document.getElementById("input1").addEventListener("keydown", function (e) {
             let char = e.which ? e.which : e.keyCode;
+            
+
             if (char >= 97 && char <= 127 || char >= 65 && char <= 90 || char == 8 || char >= 96 && char <= 105) {
                 return true;
             } else {
