@@ -41,9 +41,9 @@
                         <a class="nav-link" href="#">Git</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Portfolio</a>
+                        <a class="nav-link" href="//josephdragonportfolio.netlify.app/">Portfolio</a>
                     </li>
-                    
+
                 </ul>
             </div>
         </div>
@@ -54,15 +54,15 @@
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 class="mt-5">Tacocat</h1>
-                <p class="lead">This page will display your JS exercise</p>
-                <ul class="list-unstyled">
+                <p class="lead">Place a word you believe is a Palindrome into the input.</p>
+                <!--<ul class="list-unstyled">
                     <li>The Javascript Exercise</li>
                     <li>Is placed on this page</li>
-                </ul>
+                </ul>-->
                 <div>
                     <input id="input1" placeholder="Enter Word" />
                     <p id="flipResult">results here</p>
-                    <button class="btn btn-danger" onclick="palindrome()">Flipin Awsome!</button>
+                    <button class="btn btn-danger" onclick="palindrome()">Flippin Awsome!</button>
                 </div>
             </div>
         </div>
@@ -73,6 +73,18 @@
     <script src="//cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
     <script src="//stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <script src="Scripts/custom.js"></script>
+
+    <script>
+        document.getElementById("input1").addEventListener("keydown", function (e) {
+            let char = e.which ? e.which : e.keyCode;
+            if (char >= 97 && char <= 127 || char >= 65 && char <= 90 || char == 8 || char >= 96 && char <= 105) {
+                return true;
+            } else {
+                e.preventDefault();
+                return false;
+            }
+        });
+    </script>
 </body>
 
 </html>
